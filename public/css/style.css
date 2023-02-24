@@ -1,0 +1,29 @@
+/* color: linear-gradient(left, #21d4fd, #b721ff)
+ */
+ body{
+    font-family: roboto;
+
+ }
+.bg-custom-sidebar {
+    height: 100vh;
+    color: white;
+    background-color: #0081a7;
+}
+.bg-custom-main{
+    color: black;
+    background-color: #fdfcdc;
+}
+.btn-custom-enviar{
+    color: white;
+    background-color: #00afb9;
+}
+.btn-custom-enviar:hover{
+    color:white;
+    background-color: #0081a7;
+}
+.btn-custom-editar{
+    background-color: #FED9B7;
+}
+.btn-custom-eliminar{
+    background-color: #F07167;
+}

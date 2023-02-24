@@ -1,0 +1,57 @@
+<form method="POST"  enctype="multipart/form-data">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Titulo propiedad" aria-label="Tituloprop" name="titulo">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">Descripcion</span>
+        <textarea type="text-area" class="form-control" aria-label="Descripcion" name="descripcion"> </textarea>
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="file" name="image" accept="image/*">
+    </div>
+
+    <div class="input-group mb-3">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">MONEDA</button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">ARS</a></li>
+            <li><a class="dropdown-item" href="#">USD</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+        </ul>
+        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+    </div>
+    <h4 class="text-center">Caracteristicas de la propiedad</h4>
+    <div class="input-group mb-3">
+        <div class="input-group-text">
+            <input class="form-check-input mt-0" type="checkbox" value=""
+                aria-label="Checkbox for following text input">
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with checkbox">
+        <div class="input-group-text">
+            <input class="form-check-input mt-0" type="checkbox" value=""
+                aria-label="Checkbox for following text input">
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with checkbox">
+        <div class="input-group-text">
+            <input class="form-check-input mt-0" type="checkbox" value=""
+                aria-label="Checkbox for following text input">
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with checkbox">
+        <div class="input-group-text">
+            <input class="form-check-input mt-0" type="checkbox" value=""
+                aria-label="Checkbox for following text input">
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with checkbox">
+        <div class="input-group-text">
+            <span class="m-1">Balcon</span>
+            <input class="form-check-input mt-0" name="balcon" type="checkbox" value="">
+        </div>
+    </div>
+
+    <button class="btn btn-custom-enviar" id="btn-enviar" type="submit">Enviar</button>
+
+</form>

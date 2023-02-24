@@ -1,0 +1,71 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visuales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 bg bg-custom-sidebar text-center">
+                <h3 class="mt-2"> <strong>InmoSite</strong></h3>
+                <h5>Admin Panel</h5>
+            </div>
+            <div class="col-md-10 bg bg-custom-main">
+                <div class="row text-center">
+                    <h4 class="mt-1">Bienvenido JuanInmo</h4>
+                </div>
+                <div class="row text-center">
+                    <h5>Gestor de propiedades</h5>
+                </div>
+                <div class="row">
+                    <%- include('template/create-prop') %>
+                </div>
+                <div class="container-fluid" id="propiedades-area">
+                    <section class="pt-5 pb-5 shadow-sm">
+                        <div class="container">
+                            <div class="row pt-5">
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="text-uppercase border-bottom mb-4 text-center">Sus propiedades</h3>
+                                </div>
+                                <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                                <%- include('template/preview-props',{propiedades}) %>
+                                    <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <script>
+            const propsArea = document.getElementById('propiedades-area')
+
+            propsArea.addEventListener('click',(e)=>{
+                const target = e.target;
+                const sessionToken = sessionStorage.getItem('ts');
+                //console.log(target)
+                if(target.classList.contains('btn-custom-editar')){
+                    console.log(target.dataset.editar)
+                    //Se lleva a la dataset del usuario  + el token del administrador que se guarda en el login ya que sin el no funciona la ruta
+                    window.location.href = `/api/admin/${target.dataset.editar}?token=${sessionToken}`;
+                }
+            })
+
+        </script>
+</body>

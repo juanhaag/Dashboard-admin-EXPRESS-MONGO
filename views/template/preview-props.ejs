@@ -1,0 +1,22 @@
+<% propiedades.forEach(propiedad=> { %>
+    <div class="col-md-4 mb-3 d-flex align-items-stretch">
+        <div class="card">
+            <img src="<%= propiedad.imagen %>" class="card-img-top" alt="Card Image">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                    <%= propiedad.titulo %>
+                </h5>
+                <p class="card-text mb-4">
+                    <%= propiedad.descripcion %>
+                </p>
+                <div class="d-flex justify-content-center align-items-stretch">
+                    <button class="btn btn-custom-editar card-link btn-block" data-editar="<%= propiedad._id %>" id="editar<%= propiedad._id %>">Editar</button>
+                    <button class="btn btn-custom-eliminar card-link" id="eliminar<%= propiedad._id %>">Borrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <% }) %>
+
+    
