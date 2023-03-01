@@ -65,6 +65,7 @@ router.post('/', upload.single('image'), async (req, res) => {
             descripcion: data.descripcion,
             inmobiliaria: req.user.id
         })
+        console.log(data)
         //Le sacamos los espacios
         await propiedad.setImgUrl(req.file.filename.replace(/ /g, ""))
         await propiedad.save()
