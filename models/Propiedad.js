@@ -11,7 +11,7 @@ const schemaPropiedad = mongoose.Schema({
         required:true,
         min:4
     },
-    imagen:String,
+    imagen:Array,
     inmobiliaria: {
         type:String,
         required:true,
@@ -19,10 +19,10 @@ const schemaPropiedad = mongoose.Schema({
     },
 })
 
-schemaPropiedad.methods.setImgUrl= function setImgUrl(filename){
+schemaPropiedad.methods.setImgUrl= function setImgUrl(filenames){
     const host = process.env.APP_HOST
-    const port = process.env.PORT || 3001
-    this.imagen = `${host}:${port}/img/${filename}`
+    const port = process.env.APP_PORT || 3001
+    this.imagen = filenames.map(filename=>`${host}:${port}/img/${filename.filename}`)
 }
 
 module.exports = mongoose.model('Propiedad',schemaPropiedad)

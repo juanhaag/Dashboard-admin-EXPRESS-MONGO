@@ -1,4 +1,4 @@
-<form method="POST" enctype="multipart/form-data" id="form-principal">
+<form method="POST" enctype="multipart/form-data"  id="form-principal">
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Titulo propiedad" aria-label="Tituloprop"
             name="titulo">
@@ -10,7 +10,7 @@
     </div>
 
     <div class="input-group mb-3">
-        <input type="file" name="image" accept="image/*">
+        <input type="file" name="image" accept="image/*" multiple>
     </div>
 
     <div class="input-group mb-3">
@@ -27,100 +27,100 @@
     </div>
     <h4 class="text-center">Caracteristicas de la propiedad</h4>
     <div class="input-group mb-3 d-flex flex-wrap">
-        <div class="input-group-text">
+        <div class="d-flex flex-wrap ">
             <label class="m-1" for="">Zona</label>
-            <input id="zona-form" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
+            <input type="text" class="form-control" name="zona-form">
         </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
 
-        <div class="input-group-text">
+        <div class="d-flex flex-wrap">
             <label class="m-1" for="">Superficie total</label>
-            <input id="superficie-total" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
-        </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
+            <input type="text" class="form-control" name="superficie-total">
 
-        <div class="input-group-text">
+        </div>
+
+        <div class="d-flex flex-wrap">
             <label class="m-1" for="">Suerficie total cubierta</label>
-            <input id="superfice-cubierta" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
-        </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
+            <input type="text" class="form-control" name="superficie-cubierta">
 
-        <div class="input-group-text">
-            <label class="m-1" for="">Ambientes</label>
-            <input id="ambientes-form" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
         </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
 
-        <div class="input-group-text">
+
+        <div class="d-flex flex-wrap">
             <label class="m-1" for="">Valor</label>
-            <input id="valor-form" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
+            <input type="text" class="form-control" name="valor-form">
         </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
 
-        <div class="input-group-text">
-            <label class="m-1" for="">Tio de vista</label>
-            <input id="tipo-vista-form" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
+        <div class="d-flex flex-wrap">
+            <label class="m-1" for="">Tipo de vista</label>
+            <input type="text" class="form-control" name="tipo-vista-form">
         </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
 
-        <div class="input-group-text">
+
+        <div class="d-flex flex-wrap">
             <label class="m-1" for="">Diposicion</label>
-            <input id="disposicion-form" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
+            <input type="text" class="form-control" name="disposicion-form">
         </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
 
-        <div class="input-group-text">
-            <label class="m-1" for="">Baños</label>
-            <input id="banios-form" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
-        </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
 
-        <div class="input-group-text">
-            <label class="m-1" for="">Operacion</label>
-            <input id="operacion-form" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
-        </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
 
-        <div class="input-group-text">
-            <label class="m-1" for="">Foma de pago</label>
-            <input id="metodo-pago-form" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
-        </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
-
-        <div class="input-group-text">
+        <div class="d-flex flex-wrap">
             <label class="m-1" for="">Direccion</label>
-            <input id="direccion-form" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
+            <input type="text" class="form-control" name="direccion-form">
         </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
 
-        <div class="input-group-text">
+        <div class="d-flex flex-wrap">
             <label class="m-1" for="">Domitorios</label>
-            <input id="dormitorios-form" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
+            <input type="text" class="form-control" name="dormitorios-form">
         </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
 
-        <div class="input-group-text">
+        <div class="d-flex flex-wrap">
             <label class="m-1" for="">Tipo de propiedad</label>
-            <input id="tipo-propiedad-form" class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
+            <input type="text" class="form-control" name="tipo-propiedad-form">
         </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
 
-        <div class="input-group-text">
+        <div class="d-flex flex-wrap">
             <label class="m-1">Balcon</label>
-            <input id="balcon-form" class="form-check-input mt-0" name="balcon" type="checkbox" value="">
+            <input type="text" class="form-control" name="balcon-form">
+        </div>
+
+        <div class="select m-2 d-flex flex-column">
+            <label for="">Forma de pago</label>
+            <select class="btn btn-primary" name="forma-pago" id="">
+                <option value="Contado">Contado</option>
+                <option value="Cuotas">Cuotas</option>
+                <option value="Transferencia">Transferencia</option>
+                <option value="Otra">Otra</option>
+            </select>
+        </div>
+        <div class="select m-2 d-flex flex-column">
+            <label for="">Baño</label>
+            <select class="btn btn-primary" name="banio" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <div class="select m-2 d-flex flex-column">
+            <label for="">Ambientes</label>
+            <select class="btn btn-primary" name="ambientes" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <div class="select m-2 d-flex flex-column">
+            <label for="">Tipo de operacion</label>
+            <select class="btn btn-primary" name="tipo-operacion" id="">
+                <option value="Alquiler 12 meses">Alquiler 12 meses</option>
+                <option value="Alquiler 24 meses">Alquiler 24 meses</option>
+                <option value="Alquiler 36 meses">Alquiler 36 meses</option>
+                <option value="Alquiler estudiantes">Alquiler estudiantes</option>
+                <option value="Venta">Venta</option>
+            </select>
         </div>
     </div>
 

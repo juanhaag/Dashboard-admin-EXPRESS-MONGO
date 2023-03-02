@@ -11,7 +11,9 @@ const storage = multer.diskStorage({
     filename: (req, file, cb) => {
         //obtenemos el utlimo valor despues del punto
         const ext = file.originalname.split('.').pop()
-        cb(null, `${req.user.id}-${req.body.titulo.replace(/ /g, "").toLowerCase()}.${ext}`)
+        //Es la ruta filtrada para 1 sola foto
+        //cb(null, `${req.user.id}-${req.body.titulo.replace(/ /g, "").toLowerCase()}.${ext}`)
+        cb(null, `${req.user.id}-${Date.now()}.${ext}`)
     }
 })
 
@@ -56,7 +58,7 @@ router.get('/:id',async (req,res)=>{
 })
 ///SUBIR PROPIEDADES
 const upload = multer({ storage });
-router.post('/', upload.single('image'), async (req, res) => {
+router.post('/', upload.array('image',10), async (req, res) => {
     const data = req.body
 
     try {
@@ -65,9 +67,12 @@ router.post('/', upload.single('image'), async (req, res) => {
             descripcion: data.descripcion,
             inmobiliaria: req.user.id
         })
-        console.log(data)
+        //console.log("data",data);
         //Le sacamos los espacios
-        await propiedad.setImgUrl(req.file.filename.replace(/ /g, ""))
+        console.log(req.files);
+        await propiedad.setImgUrl(req.files)
+        //await propiedad.setImgUrl(req.files.filename.replace(/ /g, ""))
+        console.log("propiedad",propiedad)
         await propiedad.save()
         res.redirect(`/api/admin?token=${req.query.token}`)
     } catch (error) {
