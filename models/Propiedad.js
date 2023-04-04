@@ -1,3 +1,4 @@
+const string = require('@hapi/joi/lib/types/string')
 const mongoose = require('mongoose')
 
 const schemaPropiedad = mongoose.Schema({
@@ -11,6 +12,20 @@ const schemaPropiedad = mongoose.Schema({
         required:true,
         min:4
     },
+    zona: String,
+    superficieTotal:String,
+    superficieCubierta:String,
+    valor:String,
+    tipoVista:String,
+    dispocision:String,
+    direccion:String,
+    dormitorios:String,    
+    tipoPropiedad:String,    
+    balcon:String,    
+    formaPago:String,
+    bani:String,    
+    ambiente:String,    
+    operacio:String,
     imagen:Array,
     inmobiliaria: {
         type:String,

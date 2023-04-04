@@ -26,12 +26,15 @@ app.use(express.static(__dirname + "/public"));
 // import routes
 const authRoutes = require('./routes/auth');
 const adminRoute = require('./routes/admin')
+const propieadesRoute = require('./routes/propiedades')
 const validarToken = require('./routes/validate-token');
 
 
 // route middlewares
-app.use('/api/user', authRoutes);
+app.use('/api/user',authRoutes);
+app.use('/api/propiedades',propieadesRoute);
 app.use('/api/admin', validarToken, adminRoute);
+
 app.get('/', (req, res) => {
    // res.render('register')
     res.json({

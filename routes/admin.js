@@ -60,14 +60,27 @@ router.get('/:id',async (req,res)=>{
 const upload = multer({ storage });
 router.post('/', upload.array('image',10), async (req, res) => {
     const data = req.body
-
     try {
         const propiedad = new Propiedad({
             titulo: data.titulo,
             descripcion: data.descripcion,
+            zona:data["zona-form"],
+            superficieTotal:data["superficie-total"],
+            superficieCubierta: data["superficie-cubierta"],
+            valor:data["valor-form"],
+            tipoVista:data["tipo-vista-form"],
+            dispocision:data["dispocision-form"],
+            direccion:data["direccion-form"],
+            dormitorios:data["dormitorios-form"],
+            tipoPropiedad:data["tipo-propiedad-form"],
+            balcon:data['balcon-form'],
+            formaPago:data["forma-pago"],
+            banio:data.banio,
+            ambientes:data.ambientes,
+            operacion:data["tipo-operacion"],
             inmobiliaria: req.user.id
         })
-        //console.log("data",data);
+        console.log("data",data);
         //Le sacamos los espacios
         console.log(req.files);
         await propiedad.setImgUrl(req.files)
